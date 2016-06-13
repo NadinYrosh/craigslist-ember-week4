@@ -1,0 +1,32 @@
+{{#if addNewListing}}
+ <h1>New Listings</h1>
+ <div>
+   <form>
+     <div class="form-group">
+       <label for="title">Title</label>
+       {{input value=title id="title"}}
+     </div>
+
+     <div class="form-group">
+       <label for="description">Description</label>
+       {{input value=description id="description"}}
+     </div>
+
+     <div class="form-group">
+       <label for="image">Image URL</label>
+       {{input value=image id="image"}}
+     </div>
+
+     <div class="form-group">
+       <label for="cost">Cost</label>
+       {{input value=cost id="cost"}}
+     </div>
+
+     <button {{action 'saveListingtoCategoryForm'}}>Save</button>
+   </form>
+ </div>
+
+
+{{else}}
+  <button {{action 'listingFormShow'}}>New Listing</button>
+{{/if}}
