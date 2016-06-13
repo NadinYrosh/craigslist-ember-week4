@@ -1,0 +1,11 @@
+<h1>Choose Category Below to See Listings</h1>
+
+<h2>Catagories</h2>
+
+{{new-category saveCategory="saveCategoryOnRoute"}}
+
+<ul>
+  {{#each model as |category|}}
+    <li>{{#link-to 'category'}}{{category.name}}{{/link-to}}</li>
+  {{/each}}
+</ul>
